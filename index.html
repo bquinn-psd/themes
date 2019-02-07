@@ -4,3 +4,13 @@
 
 layout: home
 ---
+<div class="gallery" data-featherlight-gallery data-featherlight-filter=".thumb">
+{% for image in site.static_files %}
+    {% if image.path contains 'images/photos' %}
+    <div class="thumb-container">
+        <div class="thumb" data-featherlight="{{ site.baseurl }}{{ image.path }}" style="background-image: url('{{ site.baseurl }}{{ image.path }}');">
+        </div>
+      </div>
+    {% endif %}
+{% endfor %}
+</div>

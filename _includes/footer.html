@@ -5,30 +5,34 @@
 
     <div class="footer-col-wrapper">
       <div class="footer-col one-half">
-      <h2 class="footer-heading">{{ site.title | escape }}</h2>
+      <h2 class="footer-heading">Theme Repo</h2>
         <ul class="contact-list">
           <li class="p-name">
             {%- if site.author -%}
               {{ site.author | escape }}
             {%- else -%}
-              {{ site.title | escape }}
+              A repo for themes developed for webdev101
             {%- endif -%}
             </li>
-            {%- if site.email -%}
-            <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-            {%- endif -%}
         </ul>
       </div>
 
       <div class="footer-col one-half">
-        <p>{{- site.description | escape -}}</p>
+        <p>The jekyll themes are presented here without warranty. They may be used for any non-commercial purpose without credit.</p>
       </div>
 
-      <div class="social-links">
-        {%- include social.html -%}
-      </div>
     </div>
 
   </div>
 
 </footer>
+<script src="//code.jquery.com/jquery-latest.js"></script>
+<script src="//cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="//cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.gallery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/detect_swipe/2.1.1/jquery.detect_swipe.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $('.thumb').featherlight();
+    $('.thumb').featherlightGallery();
+  });
+</script>
